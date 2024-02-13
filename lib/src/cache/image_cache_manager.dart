@@ -129,7 +129,9 @@ mixin OicImageCacheManager on BaseCacheManager {
       key: originalKey,
       headers: headers,
       withProgress: withProgress,
-    )) {
+    ).handleError((e) {
+      //TODO implement better error handling
+    })) {
       if (response is DownloadProgress) {
         yield response;
       }

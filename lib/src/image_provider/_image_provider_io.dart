@@ -136,7 +136,8 @@ class OptimizedCacheImageProvider
       });
 
       errorListener?.call();
-      rethrow;
+      //TODO error throwing stopped
+      // rethrow;
     } finally {
       await chunkEvents.close();
     }
